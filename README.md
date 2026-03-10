@@ -1,21 +1,21 @@
-# 🧠 Inteligência Artificial Aplicada à Esclerose Múltipla: Preditores de Progressão e Estilo de Vida
+#  Inteligência Artificial Aplicada à Esclerose Múltipla: Preditores de Progressão e Estilo de Vida
 
 Neste projeto de Ciência de Dados, eu utilizo **Machine Learning** para investigar as complexas interações entre fatores clínicos, ambientais e de estilo de vida na progressão da Esclerose Múltipla (EM).
 
-## 📌 Meu Objetivo
+##  Meu Objetivo
 Desenvolver modelos de aprendizado de máquina capazes de prever se a doença de um paciente vai progredir (avaliado pela piora na escala EDSS). O meu foco não foi apenas alcançar uma alta precisão matemática ilusória, mas sim focar no **Recall** (sensibilidade) e na **interpretabilidade** dos fatores que disparam os surtos, provando que o estilo de vida é a chave para a medicina preventiva.
 
 ---
 
-## 📂 A Jornada dos Dados e Conclusões
+##  A Jornada dos Dados e Conclusões
 
-### 🔬 Capítulo 1: O Limite dos Preditores Clínicos (Dados do Kaggle)
+### Capítulo 1: O Limite dos Preditores Clínicos (Dados do Kaggle)
 Iniciei a investigação utilizando dados clínicos reais, históricos e biológicos de pacientes, obtidos de forma anonimizada no Kaggle.
 * **O que eu fiz:** Realizei a limpeza profunda dos dados (*missing data*), evitei o vazamento de dados (*Data Leakage*) e criei o meu alvo de predição comparando o EDSS inicial e final.
 * **O Desafio:** Encontrei um desbalanceamento severo, onde mais de 90% dos pacientes estavam estáveis.
 * **A Conclusão do Capítulo 1:** Treinei um modelo *Random Forest* e esbarrei no "Paradoxo da Acurácia". A IA tirou nota 92% no geral, mas teve **Recall de 0.00** para os pacientes graves (não detectou ninguém que piorou). Com isso, provei matematicamente que apenas o histórico biológico e exames de rotina não contam a história toda da doença. Faltavam os "gatilhos".
 
-### 🌿 Capítulo 2: O Poder do Estilo de Vida (Dados Sintéticos)
+###  Capítulo 2: O Poder do Estilo de Vida (Dados Sintéticos)
 Como dados reais que cruzam saúde com fatores ambientais (como os do projeto europeu BRAINTEASER) possuem barreiras estritas de privacidade médica (LGPD/GDPR), eu construí a minha própria **Fábrica de Dados Sintéticos** (Mock Data), embasada rigorosamente na literatura médica atual.
 * **O que eu fiz:** Simulei 500 pacientes incluindo variáveis cruciais: Tabagismo, Níveis de Vitamina D, Estresse, Poluição do Ar, Qualidade do Sono e Poliautoimunidade (presença de outras doenças autoimunes).
 * **A Descoberta dos Gatilhos:** Através de uma Análise de Correlação (Mapa de Calor), o algoritmo identificou sozinho que o **Tabagismo (0.32)**, a **Poliautoimunidade (0.18)** e o **Estresse (0.16)** eram os maiores vilões da progressão, enquanto a Vitamina D e o Exercício funcionavam como escudos.
@@ -24,7 +24,7 @@ Como dados reais que cruzam saúde com fatores ambientais (como os do projeto eu
 
 ---
 
-## 🤖 Pipeline de Machine Learning
+## Pipeline de Machine Learning
 1. **Limpeza e Pré-processamento:** Tratamento de *missing data* e remoção de colunas que causavam vazamento de resposta.
 2. **Geração de Dados Sintéticos:** Criação de *Mock Data* estruturada para contornar restrições de privacidade médica.
 3. **Engenharia de Atributos:** Criação da variável alvo `Houve_Progressao` baseada em regras de negócios clínicas.
@@ -33,7 +33,7 @@ Como dados reais que cruzam saúde com fatores ambientais (como os do projeto eu
 
 ---
 
-## 🛠️ Stack Tecnológica
+##  Stack Tecnológica
 * **Linguagem:** Python 3.x
 * **Análise e Manipulação de Dados:** Pandas, NumPy.
 * **Visualização:** Seaborn, Matplotlib.
@@ -42,7 +42,7 @@ Como dados reais que cruzam saúde com fatores ambientais (como os do projeto eu
 
 ---
 
-## 📈 Status do Projeto
+## Status do Projeto
 - [x] Definição do escopo e criação do repositório.
 - [x] Configuração do ambiente local no VS Code.
 - [x] Limpeza de dados e Análise Exploratória (EDA) com Mapa de Calor.
